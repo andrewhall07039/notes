@@ -1,2 +1,2 @@
 # notes
-some notes for ref
+some notes for ref with ssh
