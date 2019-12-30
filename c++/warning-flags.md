@@ -1,3 +1,5 @@
+1. gcc warning flags which should be turned on for new projects:
+
 -Wall
 
 -Wextra # reasonable and standard
@@ -38,3 +40,6 @@
 -Wuseless-cast # warn if you perform a cast to the same type
 
 -Wlifetime # ///
+
+2. nm to show shared lib functions:
+nm -gmU libfoo.so
