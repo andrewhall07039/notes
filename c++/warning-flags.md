@@ -42,4 +42,5 @@
 -Wlifetime # ///
 
 2. nm to show shared lib functions:
-nm -gmU libfoo.so
+
+nm -gmU libfoo.so | c++filt
