@@ -44,3 +44,7 @@
 2. nm to show shared lib functions:
 
 nm -gmU libfoo.so | c++filt
+
+3. clang-tidy and clang-format
+
+https://www.labri.fr/perso/fleury/posts/programming/using-clang-tidy-and-clang-format.html
