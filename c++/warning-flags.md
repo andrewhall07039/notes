@@ -67,3 +67,7 @@ auto d = 0b0011'0101;
 
 auto square(double d) { reuturn d * d; } 
 
+4.4 generic lambda
+
+auto a = [](const auto& lhs, const auto& rhs) { return lhs.length() < rhs.length(); }
+
