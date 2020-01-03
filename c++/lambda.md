@@ -25,3 +25,11 @@ auto a = [&] .....
 
 int (*fp)(int)  = [](int x) { return x + 1; };
 
+3. lambda is constexpr by default (so we can call it in statis_assert), but not noexcept.
+
+auto lamb = [](int x) { return x + 1; }
+
+static_assert(lamb(30) == 31);
+
+static_assert(not noexcept(lamb(30));
+
