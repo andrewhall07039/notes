@@ -72,3 +72,17 @@ public:
 [*this] { this->work(); } // capture by value, like [obj=*this] { obj.work(); }, only applicable to "this", and only valid in c++17. 
 
 [obj=std::move(*this)] {obj.work();} // capture by value for "*this" object;
+
+7. lambda, depending what data it captures, e.g., unique_ptr, can be copyable, movable, or neither; on the other hand, std::function is always copyable, hence, if a function is not copyable, it cannot be assigned to a std::function. 
+
+std::unique_ptr<int> prop;
+   
+auto lamb = [p = std::move(prop)] () {}
+
+std::function<void()> f = std::move(lamb);  // this won't work. 
+
+hack: make a new function to caputre std::shared_ptr; 
+
+std::function<void()> f = [ p = std::make_shared<decltype(lamb)>(std::move(lamb)]() { (*p)(); }
+
+   
