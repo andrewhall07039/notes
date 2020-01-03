@@ -33,3 +33,6 @@ static_assert(lamb(30) == 31);
 
 static_assert(not noexcept(lamb(30));
 
+4. lambda is const as well by default, use "mutable" to change it. 
+
+auto lamb = [i = 0] mutable { return ++i; } 
