@@ -36,3 +36,26 @@ static_assert(not noexcept(lamb(30));
 4. lambda is const as well by default, use "mutable" to change it. 
 
 auto lamb = [i = 0] mutable { return ++i; } 
+
+5. generic lambda = lambdas + template
+
+auto lamb = [val=1] (auto v) { return v + val; } 
+
+variadic lambdas:
+
+auto lamb = [val=1](auto... v) { return sum(v..., val); }
+
+This is like: 
+
+class Foo {
+
+   int val; 
+
+public: 
+
+   template<typename... As> 
+   
+   constexpr auto operator()(As... as) const { reurn sum(as..., val); } 
+   
+ }
+
