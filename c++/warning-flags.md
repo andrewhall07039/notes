@@ -72,6 +72,7 @@ auto square(double d) { reuturn d * d; }
 auto a = [](const auto& lhs, const auto& rhs) { return lhs.length() < rhs.length(); }
 
 4.5 literals
+
 auto a = 10s;   10 seconds;
 
 auto b = "hello"s;   std::string
