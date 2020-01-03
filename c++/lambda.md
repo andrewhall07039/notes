@@ -59,3 +59,16 @@ public:
    
  }
 
+6. "this" inside lambdas
+
+[=] () { this->work(); }  // capture pointer this, so not value of the object "*this", confusing, will get deprecated in c++20;
+
+[this] { this->work(); } // capture pointer this, 
+
+[&] {this->work(); // same as above, capture pointer this;
+
+[p=this] { p->work(); } // same as above, capture pointer this;
+
+[*this] { this->work(); } // capture by value, like [obj=*this] { obj.work(); }, only applicable to "this", and only valid in c++17. 
+
+[obj=std::move(*this)] {obj.work();} // capture by value for "*this" object;
