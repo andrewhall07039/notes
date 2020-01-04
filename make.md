@@ -1,5 +1,8 @@
 modern cmake: https://www.youtube.com/watch?v=y7ndUhdQuU8&feature=youtu.be
 
+https://github.com/Bagira80/More-Modern-CMake
+
+
 - build requirements of a target; 
 
 target_include_directories(
