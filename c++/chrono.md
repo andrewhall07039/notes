@@ -8,4 +8,4 @@ milliseconds y = x; // loseless, y = 7'200'000ms.
 
 but if another way:
 
-auto x = duration_cast<hours>(y); this is a lose conversion.
+auto x = duration_cast\<hours\>(y); this is a lose conversion.
