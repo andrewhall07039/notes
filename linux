@@ -1,0 +1,1 @@
+fwrite vs mmap: https://stackoverflow.com/questions/35891525/mmap-for-writing-sequential-log-file-for-speed
