@@ -22,3 +22,12 @@ https://elixir.bootlin.com/linux/v5.6-rc7/source/net/ipv4/ip_input.c#L529
 
 
 https://epickrram.blogspot.com/2016/05/navigating-linux-kernel-network-stack_18.html?m=0
+
+ksoftirqd pool dirver's polling method: 
+  1) driver's polling method call: netif_receive_skb(skb);  https://elixir.bootlin.com/linux/v5.6-rc7/source/drivers/net/ethernet/intel/ixgb/ixgb_main.c#L2020
+  2) netif_receive_skb_internal
+  3) static int __netif_receive_skb(struct sk_buff *skb)
+  4) __netif_receive_skb_one_core(skb, false);
+  5) __netif_receive_skb_one_core-->ip_rcv-->ip_rcv_core -->
+  
+  https://epickrram.blogspot.com/2016/05/navigating-linux-kernel-network-stack.html
