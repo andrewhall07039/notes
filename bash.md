@@ -10,3 +10,5 @@ If you want to select @ and up to the first , after that, you need to specify it
 That is @ followed by any number (*) of non-commas ([^,]) followed by a comma (,).
 
 awk '{match($0, /text=([^\|]*)\|/,m); print m[1]}' yb_voice.log
+
+awk '/pattern/{action;action;action...}' abc.log, match is one action,$0 is the line, match($0, regular_expression, m),  and regular_expression can catch result to m
